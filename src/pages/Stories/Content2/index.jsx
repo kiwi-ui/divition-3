@@ -2,10 +2,11 @@ import { useContext } from "react"
 import { MyContext } from "../../../App"
 
 const Content2 = () => {
-  const {stories,setStories} = useContext(MyContext)
+  const {stories,setStories,setHasInteracted} = useContext(MyContext)
   const closeStories = (e) => {
     e.preventDefault();
-    setStories(prev => ({...prev, dua: false}))
+    setStories({satu: false, dua: false, tiga: false})
+    setHasInteracted(false)
     console.log(stories)
   }
   return (

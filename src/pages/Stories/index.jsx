@@ -3,8 +3,9 @@ import { MyContext } from '../../App';
 import s1 from '../../assets/bride.jpg';
 
 const Stories = () => {
-    const {stories, setStories,seen, setSeen} = useContext(MyContext)
+    const {setHasInteracted, setStories,seen, setSeen} = useContext(MyContext)
     const seeStory = (id, content) => {
+        setHasInteracted(true)
         setStories((prevState) => ({
             ...prevState,
             [content]: true
@@ -13,9 +14,6 @@ const Stories = () => {
             ...prevState,
             [id]: true
         }))
-        setTimeout(() => {
-            
-          }, 3000)
     }
     return (
     <>

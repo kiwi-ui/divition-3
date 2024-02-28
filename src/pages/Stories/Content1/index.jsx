@@ -3,12 +3,13 @@ import { MyContext } from "../../../App"
 import { Link } from "react-router-dom"
 
 const Content1 = () => {
-  const {stories,setStories} = useContext(MyContext)
+  const {stories,setStories, setHasInteracted} = useContext(MyContext)
   
   const closeStories = (e) => {
     e.preventDefault();
     
-    setStories(prevState => ({...prevState, satu: false}))
+    setStories({satu: false, dua: false, tiga: false})
+    setHasInteracted(false)
     console.log(stories)
   }
   return (

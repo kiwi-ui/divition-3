@@ -2,11 +2,12 @@ import { useContext } from "react"
 import { MyContext } from "../../../App"
 
 const Content3 = () => {
-  const {stories,setStories} = useContext(MyContext)
+  const {stories,setStories, setHasInteracted} = useContext(MyContext)
   const closeStories = (e) => {
     e.preventDefault();
-    setStories(prevState => ({...prevState, tiga: false}))
-    console.log(stories)
+    setStories({satu: false, dua: false, tiga: false});
+    setHasInteracted(false)
+    console.log(stories);
   }
   return (
     <div className="vh-100 w-100 bg-danger position-fixed overflow-y-hidden top-0 z20">

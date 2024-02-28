@@ -25,22 +25,32 @@ function App() {
     empat: false,
     lima: false,
   })
+  const [hasInteracted, setHasInteracted] = useState(false);
   useEffect(() => {
-    setTimeout(() => {
-      if (stories.satu) {
-        setStories(prevState => ({ ...prevState, satu: false, dua: true }));
-        setSeen(prevState => ({ ...prevState, dua: true }));
-      } else if (stories.dua) {
-        setStories(prevState => ({ ...prevState, dua: false, tiga: true }));
-        setSeen(prevState => ({ ...prevState, tiga: true }));
-      } else if (stories.tiga) {
-        setStories(prevState => ({ ...prevState, tiga: false }));
-      }
-    }, 4000); // Transition after 6 seconds
-    
-  }, [stories]);
+    // Only trigger the timer if the user has interacted with the stories
+    if (hasInteracted) {
+      const timer = setTimeout(() => {
+        // Logic to transition to next story content
+        if (stories.satu) {
+          setStories(prevState => ({ ...prevState, satu: false, dua: true }));
+          setSeen(prevState => ({...prevState, satu: true}));
+        } else if (stories.dua) {
+          setStories(prevState => ({ ...prevState, dua: false, tiga: true }));
+          setSeen(prevState => ({...prevState, dua: true}));
+        } else if (stories.tiga) {
+          setStories(prevState => ({ ...prevState, tiga: false }));
+          setSeen(prevState => ({...prevState, tiga: true}))
+        } else {
+          // Close the story after showing the third content
+          setStories(({satu: false, dua: false, tiga: false }));
+        }
+      }, 4000); // Transition after 6 seconds
+
+      return () => clearTimeout(timer); // Cleanup timer on unmount
+    }
+  }, [stories, hasInteracted]);
   return (
-      <MyContext.Provider value={{stories, setStories, seen, setSeen}}>
+      <MyContext.Provider value={{stories, setStories, seen, setSeen, hasInteracted, setHasInteracted}}>
             <Opening />
             <Couple />
             <Stories />
