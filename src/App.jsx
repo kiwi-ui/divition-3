@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/navbar/Navbar'
 import Couple from './pages/Couple'
 import Opening from './pages/Opening/Opening'
+import MainEvent from './pages/MainEvents/MainEvent'
 
 export const MyContext = createContext();
 
@@ -26,6 +27,7 @@ function App() {
       <MyContext.Provider value={{ stories, setStories, seen, setSeen }}>
         <Opening />
         <Couple />
+        <MainEvent />
         <Navbar />        
       </MyContext.Provider>
   )

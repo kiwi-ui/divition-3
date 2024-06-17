@@ -1,0 +1,5 @@
+.roundedTopStart { border-radius: 40rem 0 0 0 }
+.roundedTopEnd { border-radius: 0 40rem 0 0 }
+.rotate90 {
+    writing-mode: vertical-lr;
+}
