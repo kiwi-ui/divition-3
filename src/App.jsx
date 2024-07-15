@@ -4,6 +4,11 @@ import Navbar from './components/navbar/Navbar'
 import Couple from './pages/Couple'
 import Opening from './pages/Opening/Opening'
 import MainEvent from './pages/MainEvents/MainEvent'
+import Gallery from './pages/Gallery'
+import Gift from './pages/Gift'
+import Wish from './pages/Wish'
+import Closing from './pages/Closing'
+import Cover from './pages/Cover'
 
 export const MyContext = createContext();
 
@@ -22,13 +27,24 @@ function App() {
     empat: false,
     lima: false,
   })
+  const [hide, setHide] = useState(true)
 
   return (
       <MyContext.Provider value={{ stories, setStories, seen, setSeen }}>
-        <Opening />
-        <Couple />
-        <MainEvent />
-        <Navbar />        
+        {/* {hide ?  */}
+          {/* <Cover hide={hide} setHide={setHide}/> : */}
+
+          <>
+            <Opening />
+            <Couple />
+            <MainEvent />
+            <Gallery />
+            <Gift />
+            <Wish />
+            <Closing />
+            <Navbar />
+          </>
+        {/* } */}
       </MyContext.Provider>
   )
 }

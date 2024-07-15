@@ -27,44 +27,57 @@ const Couple = () => {
 
     return (
         <div className={`${style.bgColorPrimary} text-center py-5`} id="main">
-            <div className="container">
-                <div className="text-black">
-                    <p className="fw-semibold fs-1 mb-2">Y&A</p>
-                    <p className="fs-3">Ar-Rum 21</p>
-                    <p className="lead mx-5">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir</p>
+            <div className="">
+                <div className="text-black container">
+                    {/* <p className="fw-semibold fs-1 mb-2">Y&A</p> */}
+                    <div>
+                        {/* <a className="vw-100 ">halo</a> */}
+                        <p className="fs-3">Ar-Rum 21</p>
+                    </div>
+                    <p className="lead mb-5">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir</p>
                 </div>
 
-                <div className="text-black d-flex flex-lg-row flex-column my-4 ">
+                <div className="text-black d-flex flex-lg-row flex-column justify-content-center gap-3 my-2">
                     <div className='d-flex flex-column'>
-                        <div className='d-flex flex-row justify-content-lg-center justify-content-start position-relative'>
-                            <img src={ bridePhotos[currentImg] } className={`shadow w-50 ${style.roundedTopLeftCornerAside} ${fade ? '' : style.second}`} alt="bride"/>
-                            <span className={`${style.rotate90} ${style.roundedBotRightCorner} text-danger fs-2 bg-body `}>The Bride</span>
-                        </div>
-                        <div className="mt-3 text-lg-center text-start">
-                            <p className="fs-2 fw-semibold">Yusni</p>
-                            <p className="fs-5 mb-4">Putri dari bapak Ahmad</p>
-                            <BsInstagram className="fs-4 fw-lighter"/>
+                        <div className='d-flex flex-row justify-content-start position-relative'>
+                            <img src={ bridePhotos[currentImg] } className={`shadow w-100 ${ style.roundedTopLeftCornerAside } ${fade ? '' : style.second}`} alt="bride"/>
+                            <span className={ `${ style.rotate90 }  text-danger fs-2 bg-body position-absolute start-0 h-100 px-2`}>The Bride</span>
+                            
+                            <div className={ `${ style.bgTransparent1 } bottom-0 w-75 px-4 py-3 position-absolute ` } style={{ zIndex: 2, left: '3rem' }}>
+                                <div className='container text-start'>
+                                    <p className="fw-semibold mb-1 text-start" style={{ fontSize: '2rem' }}>Yusni Anggara</p>
+                                    <p className="fs-4 mb-0 fw-bold">Putri bungsu dari</p>
+                                    <p className="fs-5 mb-2">Bapak mempelai & Ibu mempelai</p>
+                                    <div className="">
+                                        <BsInstagram className="fs-4"/>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <p className="m-4 fs-1 fw-bold my-md-5">&</p>
-
                     <div className='d-flex flex-column'>
-                        <div className={`d-flex flex-row justify-content-lg-center justify-content-end position-relative`}>
-                            <span className={` ${style.rotate90} ${style.roundedTopLeftCornerAside} text-danger start-0 fs-2 bg-body `}>The Groom</span>
-                            <img src={ groomPhotos[currentImg] }  className={`shadow w-50 ${fade ? '' : style.second} ${style.roundedBotRightCorner}`} alt="groom"/>
-                        </div>
-                        <div className="mt-3 text-lg-center text-end">
-                            <p className="fs-2 fw-semibold">Anggara</p>
-                            <p className="fs-5 mb-4">Putri dari bapak Dani</p>
-                            <BsInstagram className="fs-4"/>
+                        <div className={ `d-flex flex-row justify-content-center justify-content-start position-relative` }>
+                            <img src={ groomPhotos[currentImg] }  className={`shadow w-100 ${ fade ? '' : style.second }`} alt="groom"/>
+                            <span className={` ${ style.rotate90 } text-danger fs-2 bg-body position-absolute end-0 h-100 px-2`}>The Groom</span>
+                            
+                            <div className={` ${ style.bgTransparent1 } bottom-0 w-75 text-center px-4 py-3 position-absolute `} style={{zIndex: 2}}>
+                                <div className='container text-end'>
+                                    <p className="fw-semibold mb-1" style={{ fontSize: '2rem' }}>Yusni Anggara</p>
+                                    <p className="fs-4 mb-0 fw-bold">Putri bungsu dari</p>
+                                    <p className="fs-5 mb-2">Bapak mempelai & Ibu mempelai</p>
+                                    <div className="">
+                                        <BsInstagram className="fs-4"/>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div>
+                {/* <div className="my-4">
                     <p className="m-0 lead text-black">Maka dari itu kami mengharap kehadiran dari bapak/ibu tepatnya pada : </p>
-                </div>
+                </div> */}
             </div>
         </div>
   )

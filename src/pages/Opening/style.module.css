@@ -1,3 +1,18 @@
 .bgImgMain {
     background-image: url('../../assets/bgImg-main.jpg');
 }
+.bgCenter {
+    background-position: center;
+}
+.bgTop {
+    background-position: top;
+}
+.bgCover {
+    background-size: cover;
+}
+.bgCOntain {
+    background-size: contain;
+}
+.fs05{
+    font-size: 2.5rem;
+}

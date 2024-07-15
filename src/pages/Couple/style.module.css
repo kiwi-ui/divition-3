@@ -27,3 +27,6 @@
 .second {
     animation: fadeIn 4s ease-in-out;
 }
+.mt3{
+    margin-top: -9rem;
+}
