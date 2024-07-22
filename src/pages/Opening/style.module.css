@@ -7,12 +7,26 @@
 .bgTop {
     background-position: top;
 }
-.bgCover {
-    background-size: cover;
-}
 .bgCOntain {
     background-size: contain;
 }
 .fs05{
     font-size: 2.5rem;
+}.bgCover{ 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
+.bgCover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index:0;
+}
+
+

@@ -2,14 +2,30 @@ import { useParams } from 'react-router-dom';
 import profileImage from '../../assets/cover.jpg';
 import style from'./style.module.css';
 import { BsEnvelopeHeart } from 'react-icons/bs';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Cover = ({ hide, setHide }) => {
+const Cover = ({ hide, setHide, handleLoad, isLoading, setIsLoading }) => {
     
     const { name } = useParams();
+    const navigate = useNavigate();
     const hideCover = () => {
-        return setHide(!hide);
+        // if (document.readyState === 'complete') {
+        //             setIsLoading(false)
+        //         }
+        navigate(`/${name}/main`)
     }
+    // useEffect(() => {    
+    //     if (document.readyState === 'complete') {
+    //         setIsLoading(false)
+    //     } else {
+    //         window.addEventListener('load', handleLoad);
     
+    //         return () => {
+    //             window.removeEventListener('load', handleLoad);
+    //         };
+    //     }
+    // }, [isLoading]);
     return (
         <section className={ `${ style.bgCover } text-white overflow-hidden d-flex flex-column justify-content-between align-items-center text-center py-5` }>
             <div className={`${ style.z10 }`}>

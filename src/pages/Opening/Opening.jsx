@@ -39,7 +39,7 @@ const Opening = () => {
 
   return (
     <section className={`vh-100 ${screenWidth > 570 ? `${style.bgContain}` : `${style.bgCover}` }  position-relative d-flex align-items-end`} style={ backgroundImageStyle }>
-      <div className="container py-4">
+      <div className="container py-4" style={{zIndex: 10}}>
         <div className="my-3 text-center mx-3 text-white">
           <h5 className="mb-2">The Wedding Of</h5>
           <h1 className={`mb-3 fw-thin ${ style.fs05 }`}>Yusni & Anggara</h1>

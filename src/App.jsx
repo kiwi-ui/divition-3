@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useState, useEffect } from 'react'
 import './App.css'
 import Navbar from './components/navbar/Navbar'
 import Couple from './pages/Couple'
@@ -8,44 +8,40 @@ import Gallery from './pages/Gallery'
 import Gift from './pages/Gift'
 import Wish from './pages/Wish'
 import Closing from './pages/Closing'
-import Cover from './pages/Cover'
+import Loading from './pages/Loading'
 
 export const MyContext = createContext();
 
 function App() {
-  const [stories, setStories] = useState({
-    satu: false,
-    dua: false,
-    tiga: false,
-    empat: false,
-    lima: false
-  });
-  const [seen, setSeen] = useState({
-    satu: false,
-    dua: false,
-    tiga: false,
-    empat: false,
-    lima: false,
-  })
-  const [hide, setHide] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
 
-  return (
-      <MyContext.Provider value={{ stories, setStories, seen, setSeen }}>
-        {/* {hide ?  */}
-          {/* <Cover hide={hide} setHide={setHide}/> : */}
+  function handleLoad() {
+    setIsLoading(false);
+  }
+  useEffect(() => {
 
-          <>
-            <Opening />
-            <Couple />
-            <MainEvent />
-            <Gallery />
-            <Gift />
-            <Wish />
-            <Closing />
-            <Navbar />
-          </>
-        {/* } */}
-      </MyContext.Provider>
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+
+    }
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
+  return ( 
+      <>
+        <Opening />
+        <Couple />
+        <MainEvent />
+        <Gallery />
+        <Gift />
+        <Wish />
+        <Closing />
+        <Navbar />
+      </>
   )
 }
 
