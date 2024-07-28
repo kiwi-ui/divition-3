@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from 'react'
-import './App.css'
 import Navbar from './components/navbar/Navbar'
 import Couple from './pages/Couple'
 import Opening from './pages/Opening/Opening'
@@ -8,7 +7,7 @@ import Gallery from './pages/Gallery'
 import Gift from './pages/Gift'
 import Wish from './pages/Wish'
 import Closing from './pages/Closing'
-import Loading from './pages/Loading'
+// import Loading from './pages/Loading'
 
 export const MyContext = createContext();
 

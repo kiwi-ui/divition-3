@@ -26,37 +26,44 @@ const CountDown = () => {
                 return (setIsEventOver((event) => !event));
             }
         }, 1000)
-
     }, [])
     
     return (
         <section id="date" className={ `border-0` }>
-            <div>
+            <div className="container">
                 {!isEventOver ? 
-                    <div className="row text-white justify-content-center border-box">
-                        <div className={` ${ style.bgTransparent } col-2 text-center d-flex align-items-center flex-column rounded-2 shadow`}>
-                            <p className="fs-5 pt-1 mx-3 px-2 mb-0">{ event.days }</p>
-                            <p className= "m-0 pb-1 ">Hari</p>
+                    <div className="row text-white border-box g-1">
+                        <div className="col-3">
+                            <div className={` border border-1 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow`}>
+                                <p className="fw-bold fs-2 pt-1 px-2 mb-0">{ event.days }</p>
+                                <p className= "m-0 pb-1 ">Hari</p>
+                            </div>
                         </div>
-                        <div className={` ${ style.bgTransparent } col-2 mx-2 text-center d-flex align-items-center flex-column rounded-2 shadow`} >
-                            <p className="fs-5 pt-1 mx-3 px-2 mb-0 gx-3">{ event.hours }</p>
-                            <p className= "m-0 pb-1 ">Jam</p>
+                        <div className="col-3">
+                            <div className={` border border-1 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow`}>
+                                <p className="fw-bold fs-2 pt-1 px-2 mb-0">{ event.hours }</p>
+                                <p className= "m-0 pb-1 ">Hari</p>
+                            </div>
                         </div>
-                        <div className={` ${ style.bgTransparent } col-2 me-2 text-center d-flex align-items-center flex-column rounded-2 shadow`} >
-                            <p className="fs-5 pt-1 mx-3 px-2 mb-0">{ event.minutes }</p>
-                            <p className= "m-0 pb-1 ">Menit</p>
+                        <div className="col-3">
+                            <div className={` border border-1 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow`}>
+                                <p className="fw-bold fs-2 pt-1 px-2 mb-0">{ event.minutes }</p>
+                                <p className= "m-0 pb-1 ">Hari</p>
+                            </div>
                         </div>
-                        <div className={` ${ style.bgTransparent } col-2 text-center d-flex align-items-center flex-column rounded-2 shadow`} >
-                            <p className="fs-5 pt-1 mx-3 px-2 mb-0">{ event.seconds }</p>
-                            <p className= "m-0 pb-1 ">Detik</p>
+                        <div className="col-3">
+                            <div className={` border border-1 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow`}>
+                                <p className="fw-bold fs-2 pt-1 px-2 mb-0">{ event.seconds }</p>
+                                <p className= "m-0 pb-1 ">Hari</p>
+                            </div>
                         </div>
+
                     </div>
                     :
                     <div>
                         <p>Acara Sudah Selesai</p>
                     </div>
                 }
-
             </div>
         </section>
     )

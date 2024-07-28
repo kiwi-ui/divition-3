@@ -23,6 +23,6 @@
 .txtColorPrimary { color: #F1D6AB}
 .bgColorPrimary { background-color: #F1D6AB}
 a {text-decoration: none}
-.bgTransparent {
-    background-color: rgb(28, 29, 35, 0.4);
+.bgCountdown {
+    background-color: rgb(204, 182, 184, 0.8)
 }

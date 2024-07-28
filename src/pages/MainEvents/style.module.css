@@ -3,3 +3,6 @@
 .rotate90 {
     writing-mode: vertical-lr;
 }
+.borderPrimary{
+    border-color: rgb(179, 148, 151) !important
+}

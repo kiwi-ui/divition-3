@@ -13,7 +13,7 @@ const AddToCalendar = () => {
         size='4'
         customCss=''
         options="google"
-        styleLight='--btn-background: rgb(28, 29, 35, 0.4); --btn-text: white;--btn-border: none;'
+        styleLight='--btn-background: rgb(204, 182, 184, 0.8); --btn-text: white;--btn-border: white; --btn-border-width: white'
     ></AddToCalendarButton>
   )
 }
