@@ -3,6 +3,7 @@ import { BsCalendar } from 'react-icons/bs';
 import { BiHomeAlt2, BiEnvelopeOpen,BiSolidUpArrow } from 'react-icons/bi';
 import { RiGalleryLine } from 'react-icons/ri';
 import style from './style.module.css';
+import general from '../../App.module.css';
 
 const Navbar = () => {
 	const [isSideBarHided,setIsSideBarHided] =useState(false);

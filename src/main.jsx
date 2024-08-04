@@ -1,11 +1,9 @@
 import ReactDOM from 'react-dom/client'
-// import App from './App.jsx'
 import './index.css'
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.js'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-// import Cover from './pages/Cover/index.jsx'
 import Loading from './pages/Loading/index.jsx'
 import { Suspense, lazy } from 'react'
 

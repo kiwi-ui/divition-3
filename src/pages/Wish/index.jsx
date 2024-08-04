@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import style from './style.module.css';
+import general from '../../App.module.css';
+import fonts from '../../assets/fonts/fonts.module.css';
 
 const Wish = () => {
     const [formData, setFormData] = useState({
@@ -51,27 +52,27 @@ const Wish = () => {
 
     return (
         <section className="wish d-flex align-items-center my-5">
-            <div className={ `container rounded-4 shadow-lg d-flex flex-column justify-content-center w-75` }>
+            <div className={ `container ${general.bgPrimary} rounded-4 shadow-lg d-flex flex-column justify-content-center w-75` }>
                 <div id="wish" className=" py-5 container">
-                    <p className="fw-bold text-black m-0 text-center fs-1 mb-3 pb-2">Ucapan</p>
+                    <p className={`fw-bold m-0 text-center fs-1 mb-3 pb-2 ${ fonts.pinyonScript }`}>Ucapan</p>
 
                     <form name="submit-to-google-sheet" id="form" className="form-wrapper row py-1" method="post">
                         <div className="col-md-6 col-12 mt-md-3">
-                            <input className="w-100 p-3 rounded-1 border-0 fw-bold bg-secondary-subtle" name="nama" type="text" placeholder="Nama" onChange={ handleNameChange } value={ formData.name }/>
+                            <input className="w-100 p-3 rounded-1 border-0 fw-bold bg-white" name="nama" type="text" placeholder="Nama" onChange={ handleNameChange } value={ formData.name }/>
                             { isInputEmpty && <p className="m-0 text-danger fw-bold ps-1">Harap isikan nama anda</p> }
                         </div>
                         <div className="col-md-6 col-12 my-3">
-                            <input className="w-100 p-3 rounded-1 border-0 fw-bold bg-secondary-subtle" name="no" type="number" placeholder="Nomor ponsel (opsional)" />
+                            <input className="w-100 p-3 rounded-1 border-0 fw-bold bg-white" name="no" type="number" placeholder="Nomor ponsel (opsional)" />
                         </div>
                         <div className="col-12">
-                            <textarea className="w-100 pb-5 pt-2 px-3 rounded-1 border-0 fw-bold bg-secondary-subtle" name="harapan" placeholder="Harapan untuk pengantin" onChange={ handleWishChange } value={ formData.harapan } required />
+                            <textarea className="w-100 pb-5 pt-2 px-3 rounded-1 border-0 fw-bold bg-white" name="harapan" placeholder="Harapan untuk pengantin" onChange={ handleWishChange } value={ formData.harapan } required />
                             { isInputEmpty && <p className="m-0 text-danger fw-bold ps-1">Harap isikan nama harapan anda untuk kepengantin</p> }
                         </div>
                     </form>
 
                     <div className="pt-4 w-100 d-flex flex-column align-items-end position-relative">
-                        <a href='blank' type="submit" className={`py-2 px-4 position-relative rounded-2 border-0 text-white fw-semibold ${isLoading ? 'disabled' : '' } btn`} aria-disabled="true" style={{backgroundColor: "#2b2b2b"}} onClick={ handleSubmit }>
-                            { isLoading ? <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> : 'Submit' }
+                        <a href='blank' type="submit" className={`py-2 px-4 position-relative rounded-2 border-0 text-white fw-semibold btn ${isLoading ? 'disabled' : '' } btn btn-light`} aria-disabled="true" onClick={ handleSubmit }>
+                            { isLoading ? <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> : <p className="mb-0 text-black">Submit</p> }
                         </a>
                         { isSuccess && <p className="position-relative bg-text-primary">Pesan Terkirim!</p> }
                     </div>

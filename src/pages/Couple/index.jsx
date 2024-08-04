@@ -1,35 +1,50 @@
-import groom from '../../assets/couple/groom.jpg';
 import { BsInstagram } from 'react-icons/bs';
-import bride from '../../assets/couple/bride.jpg';
 import style from './style.module.css';
-import bride2 from '../../assets/couple/profile.jpg';
-import bride3 from '../../assets/couple/g-5crop.jpg';
-import groom1 from '../../assets/couple/g-1crop.jpg';
-import groom2 from '../../assets/couple/g-4.jpg';
-
+import groom from '../../assets/couple/groom.webp';
+import bride from '../../assets/couple/bride.webp';
+import bride2 from '../../assets/couple/profile.webp';
+import bride3 from '../../assets/couple/g-5crop.webp';
+import groom1 from '../../assets/couple/g-1crop.webp';
+import groom2 from '../../assets/couple/12.webp';
+import fonts from '../../assets/fonts/fonts.module.css';
 import { useEffect, useState } from 'react';
 
 const Couple = () => {
     const bridePhotos = [bride,bride2,bride3];
     const groomPhotos = [groom, groom1, groom2];
     const [currentImg, setCurrentImg] = useState([]);
-    const [fade, setFade] = useState(false);
+    const [fade, setFade] = useState();
     
     useEffect(() => {
-        const interval = setInterval(() => {
-            setFade(true)
-            setTimeout(() => {
-                setCurrentImg((index) => (index+1) % bridePhotos.length );
-                setFade(false);
-            }, 3000);
-        }, 5000);
+        setCurrentImg(0)
+        // const interval = setInterval(() => {
+            
+        //     setFade(true);
+        //     setCurrentImg((prevIndex) => (prevIndex + 1) % bridePhotos.length);
+        //     setTimeout(() => {
+        //         setFade(false);
+        //     }, 3000);
+        // }, 6000);
+        const switchImage = async () => {
+            // Fade out
+            setFade(true);
+            await new Promise(resolve => setTimeout(resolve, 4000)); // Adjust timeout to match fade duration
+
+            // Update image
+            setCurrentImg((prevIndex) => (prevIndex + 1) % bridePhotos.length);
+
+            // Fade in
+            setFade(false);
+        };
+
+        const interval = setInterval(switchImage, 5000); // Interval to switch images
 
         return () => clearInterval(interval);
     }, []);
 
     return (
         <div className={ `text-center position-relative` } id="main">
-            <div className={`bg-light text-black py-5`}>
+            <div className={ `bg-light text-black py-5` }>
                 <div className="container position-relative" >
                     <div>
                         <p className="fs-2 fw-semibold" style={{zIndex: 100}}>Ar-Rum 21</p>
@@ -41,12 +56,12 @@ const Couple = () => {
             <div className="text-black d-flex flex-lg-row flex-column justify-content-center gap-md-3">
                 <div className='d-flex flex-column'>
                     <div className='d-flex flex-row justify-content-start position-relative'>
-                        <img src={ bridePhotos[currentImg] } className={`shadow w-100 ${ style.roundedTopLeftCornerAside } ${fade ? '' : style.second}`} alt="bride"/>
-                        <span className={ `${ style.rotate90 } ${ style.bgTag } text-white fs-2 position-absolute start-0 h-100 px-3`}>The Bride</span>
+                        <img src={ bridePhotos[currentImg] } className={`shadow w-100 ${ style.roundedTopLeftCornerAside } ${ fade ? style.third : style.second }` } alt="bride"/>
+                        <span className={ `${ style.rotate90 }  ${ style.bgTag } ${fonts.pinyonScript} text-white fs-1 position-absolute start-0 h-100 px-3`}>The Bride</span>
                         
-                        <div className={ `${ style.bgTransparent1 } bottom-0 w-75 px-3 py-3 position-absolute ` } style={{ zIndex: 2, left: '3rem' }}>
+                        <div className={ `${ style.bgTransparent1 } rounded bottom-0 w-75 px-3 py-3 position-absolute ` } style={{ zIndex: 2, left: '3.4rem' }}>
                             <div className='container text-start'>
-                                <p className="fw-semibold mb-1 text-start fs-2" style={{ letterSpacing:'0.2rem' }}>James Blood</p>
+                                <p className={ ` ${ fonts.pinyonScript } fw-semibold mb-1 fs-1 `} style={{ letterSpacing:'0.2rem' }}>Yusni Anggara</p>
                                 <p className="fs-4 mb-0 fw-bold">Putri bungsu dari</p>
                                 <p className="mb-2">Bapak mempelai & Ibu mempelai</p>
                                 <div className="">
@@ -60,11 +75,11 @@ const Couple = () => {
                 <div className='d-flex flex-column'>
                     <div className={ `d-flex flex-row justify-content-center justify-content-start position-relative` }>
                         <img src={ groomPhotos[currentImg] } className={`shadow w-100 ${ fade ? '' : style.second }`} alt="groom"/>
-                        <span className={` ${ style.rotate90 } ${ style.bgTag } text-white fs-2 position-absolute end-0 h-100 px-3`}>The Groom</span>
+                        <span className={` ${ style.rotate90 }  ${ fonts.pinyonScript } ${ style.bgTag } text-white fs-1 position-absolute end-0 h-100 px-3`}>The Groom</span>
 
-                        <div className={` ${ style.bgTransparent1 } bottom-0 w-75 text-center px-4 py-3 position-absolute `} style={{zIndex: 2, right: '3rem'}}>
+                        <div className={` ${ style.bgTransparent1 } rounded bottom-0 w-75 text-center px-4 py-3 position-absolute `} style={{zIndex: 2, right: '3.1rem'}}>
                             <div className='container text-end'>
-                                <p className="fw-semibold mb-1 fs-3" style={{ letterSpacing: "0.2rem" }}>Akhwatiyah</p>
+                                <p className={ ` ${ fonts.pinyonScript } fw-semibold mb-1 fs-1 `} style={{ letterSpacing: "0.2rem" }}>Yusni Anggara</p>
                                 <p className="fs-4 mb-0 fw-bold">Putri bungsu dari</p>
                                 <p className=" mb-2">Bapak mempelai & Ibu mempelai</p>
                                 <div className="">
@@ -75,10 +90,6 @@ const Couple = () => {
                     </div>
                 </div>
             </div>
-
-            {/* <div className="my-4">
-                <p className="m-0 lead text-black">Maka dari itu kami mengharap kehadiran dari bapak/ibu tepatnya pada : </p>
-            </div> */}
         </div>
   )
 }

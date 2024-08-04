@@ -1,6 +1,6 @@
 * {box-sizing: border-box;}
 .bgCover{ 
-    background-image: url('../../assets/cover.jpg'); 
+    background-image: url('../../assets/home-cover.jpg'); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,7 +17,4 @@
     z-index:0;
 }
 .cover {border-radius: 10rem 10rem 0 0}
-.textColorPrimary { color: rgb(227, 176, 75); }
-.bgColorPrimary { background-color: #F1D6AB;}
-.bgButton { background-color: #c3912d }
 .z10 {z-index: 10;}

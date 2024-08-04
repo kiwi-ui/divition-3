@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
-.pengantin { font-family: 'Bonheur Royale', cursive; }
 .bgShadow {
     background-image: url(../../assets/ilustration/1.webp);
     background-position: center;
@@ -45,9 +43,12 @@
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
-/* .second {
-    animation: fadeIn 4s ease-in-out;
-} */
+.second {
+    animation: fadeIn 2s ease-in;
+}
+.third {
+    animation: none;
+}
 .mt3{
     margin-top: -9rem;
 }

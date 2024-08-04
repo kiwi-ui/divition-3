@@ -7,6 +7,7 @@ import g5 from '../../assets/g-7.webp';
 import g6 from '../../assets/g-6.webp';
 import ModalImage from './ModalImage';
 import style from './style.module.css';
+import general from '../../App.module.css';
 
 const Gallery = () => {
     const galleryImages = [{img: g1},{img: g2},{img: g3},{img: g4},{img: g5},{img: g6}]
@@ -20,16 +21,18 @@ const Gallery = () => {
     return (
         <>
             <ModalImage toggle={ isPhotoClicked } setToggle={ setisPhotoClicked } clickedPhoto={ clickedPhoto }/>
-            <section id="gallery" className={ `gallery ${style.bgColorPrimary} mt-4 position-relative` }>
+            <section id="gallery" className={ `gallery ${ general.bgSecondary } mt-4 position-relative` }>
                 <div className="container py-5 text-black">
-                    <div className="">
+                    <div className="mb-4">
                         <p className="mb-0 p-0 fs-1 mt-2" style={{marginLeft:'-0.5rem'}}>Momen</p>
                         <div className="border border-1 border-black position-absolute ms-5" style={{ marginTop: '-0.6rem', width: '78%' }}></div>
                         <p className={`mb-0 position-absolute fs-1 ms-5 ${style.alexBrush}`} style={{ marginTop: '-1.4rem' }}>Bahagia</p>
                     </div>  
-                    <div className="mt-5 mb-4">
-                        <p className="mb-0 h3 text-center">Jika aku mendapatkan bunga setiap kali aku memikirkanmu, aku bisa selamanya berjalan di hamparan taman bunga</p>
+        
+                    <div className="mb-4">
+                        <p className="mb-0 text-center">Jika aku mendapatkan bunga setiap kali aku memikirkanmu, aku bisa selamanya berjalan di hamparan taman bunga</p>
                     </div>
+        
                     <div className="row">
                         { galleryImages.map((image, index) => 
                             (

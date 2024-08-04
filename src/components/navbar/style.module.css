@@ -1,9 +1,11 @@
 .navbarTransition {
-    background-color: rgb(227, 176, 75, 0.8);
+    background-color: rgb(179, 148, 151) !important
     /* border-radius: 0rem 1rem 1rem 0rem ; */
 }
-.bgTtoggle {background-color: #E3B04B;}
-.textColorPrimary{color: #E3B04B}
+.bgTtoggle {    
+    background-color: rgb(179, 148, 151) !important;
+}
+.textColorPrimary{color: rgb(179, 148, 151)}
 a {text-decoration: none; color: white;}
 .mtm2{margin-top: -2rem;}
 .z10 {z-index: 10;}

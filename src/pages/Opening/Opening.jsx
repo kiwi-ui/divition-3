@@ -1,11 +1,12 @@
 import style from "./style.module.css";
 import { useEffect, useState } from "react";
-import img1 from '../../assets/vertical1.jpg';
-import img2 from '../../assets/vertical2.jpg';
-import img3 from '../../assets/vertical3.jpg';
-import img4 from '../../assets/vertical4.jpg';
+import img1 from '../../assets/vertical1.webp';
+import img2 from '../../assets/vertical2.webp';
+import img3 from '../../assets/vertical3.webp';
+import img4 from '../../assets/vertical4.webp';
 import CountDown from "../../components/CountDown";
 import AddToCalendar from "../../components/AddToCalendar";
+import fonts from '../../assets/fonts/fonts.module.css';
 
 const Opening = () => {
   const bgImg = [img1, img2, img3, img4];
@@ -29,10 +30,9 @@ const Opening = () => {
   }
 }, [])
 
-
   const backgroundImageStyle = {
-    // backgroundImage: `url(${bgImg[counts]})`,
-    backgroundImage: `url(${img1})`,
+    backgroundImage: `url(${bgImg[counts]})`,
+    // backgroundImage: `url(${img1})`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center'
   };
@@ -42,7 +42,7 @@ const Opening = () => {
       <div className="container py-4" style={{zIndex: 10}}>
         <div className="my-3 text-center mx-3 text-white">
           <p className="mb-2 fs-5">The Wedding Of</p>
-          <p className={`mb-3 fw-bold fs-1`}>Yusni & Anggara</p>
+          <p className={ ` ${fonts.pinyonScript} mb-3 fw-bold` } style={{fontSize: '2.5rem'}}>Yusni & Anggara</p>
           <CountDown />
         </div>
         
