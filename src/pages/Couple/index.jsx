@@ -55,11 +55,11 @@ const Couple = () => {
 
             <div className="text-black d-flex flex-lg-row flex-column justify-content-center gap-md-3">
                 <div className='d-flex flex-column'>
-                    <div className='d-flex flex-row justify-content-start position-relative'>
-                        <img src={ bridePhotos[currentImg] } className={`shadow w-100 ${ style.roundedTopLeftCornerAside } ${ fade ? style.third : style.second }` } alt="bride"/>
-                        <span className={ `${ style.rotate90 }  ${ style.bgTag } ${fonts.pinyonScript} text-white fs-1 position-absolute start-0 h-100 px-3`}>The Bride</span>
+                    <div className={`${ style.details } d-flex flex-row justify-content-start position-relative`}>
+                        <img src={ bridePhotos[currentImg] } className={`shadow w-100  ${ fade ? style.third : style.second } ${ style.img }` } alt="bride"/>
+                        <span className={ `${ style.rotate90 } ${ style.detailsTag }  ${ style.bgTag } ${fonts.pinyonScript} text-white fs-1 position-absolute start-0 h-100 px-3`}>The Bride</span>
                         
-                        <div className={ `${ style.bgTransparent1 } rounded bottom-0 w-75 px-3 py-3 position-absolute ` } style={{ zIndex: 2, left: '3.4rem' }}>
+                        <div className={ `${ style.bgTransparent1 } rounded bottom-0 w-75 px-3 py-3 position-absolute ${style.bio}` } style={{ zIndex: 2, left: '3.4rem' }}>
                             <div className='container text-start'>
                                 <p className={ ` ${ fonts.pinyonScript } fw-semibold mb-1 fs-1 `} style={{ letterSpacing:'0.2rem' }}>Yusni Anggara</p>
                                 <p className="fs-4 mb-0 fw-bold">Putri bungsu dari</p>
