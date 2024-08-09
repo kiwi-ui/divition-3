@@ -8,6 +8,7 @@ import g6 from '../../assets/g-6.webp';
 import ModalImage from './ModalImage';
 import style from './style.module.css';
 import general from '../../App.module.css';
+import Slide from '../../assets/animation';
 
 const Gallery = () => {
     const galleryImages = [{img: g1},{img: g2},{img: g3},{img: g4},{img: g5},{img: g6}]
@@ -37,7 +38,9 @@ const Gallery = () => {
                         { galleryImages.map((image, index) => 
                             (
                                 <div key={index} className="gallery-photos col-6 mb-3 p-1 position-relative shadow-sm">
-                                    <img className="w-100" src={ image.img } alt='prewedding' onClick={ showImage } />
+                                    <Slide delay={index-0.5}>
+                                        <img className="w-100" src={ image.img } alt='prewedding' onClick={ showImage } />
+                                    </Slide>
                                 </div> 
                             )
                         )}

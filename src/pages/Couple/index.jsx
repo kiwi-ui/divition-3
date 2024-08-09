@@ -77,7 +77,7 @@ const Couple = () => {
                 </Slide>
 
                 <div className='d-flex flex-column'>
-                    <Slide delay={2}>
+                    <Slide delay={1.5}>
                         <div className={ ` ${ style.details2 } d-flex flex-row justify-content-center justify-content-start position-relative` }>
                             <img src={ groomPhotos[currentImg] } className={`shadow w-100 ${ fade ? '' : style.second }`} alt="groom"/>
                             <span className={` ${ style.rotate90 } ${ style.detailsTag } ${ fonts.pinyonScript } ${ style.bgTag } text-white fs-1 position-absolute end-0 h-100 px-3`}>The Groom</span>
