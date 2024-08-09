@@ -37,7 +37,7 @@ const Opening = () => {
     backgroundPosition: 'center'
   };
 
-  return (
+  return ( 
     <section className={`vh-100 ${screenWidth > 570 ? `${style.bgContain}` : `${style.bgCover}` }  position-relative d-flex align-items-end`} style={ backgroundImageStyle }>
       <div className="container py-4" style={{zIndex: 10}}>
         <div className="my-3 text-center mx-3 text-white">
