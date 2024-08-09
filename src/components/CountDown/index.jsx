@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import style from './style.module.css';
+import Slide from '../../assets/animation';
 
 const CountDown = () => {
     const [event, setEvent] = useState({
-        days : null,
+        days: null,
         hours: null,
-        minutes:  null,
-        seconds:  null
+        minutes: null,
+        seconds: null
     })
     const [isEventOver, setIsEventOver] = useState(false)
 
@@ -20,44 +21,51 @@ const CountDown = () => {
             const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-            setEvent({days, hours, minutes, seconds})
+            setEvent({ days, hours, minutes, seconds })
 
             if (timeDifference <= 0) {
                 return (setIsEventOver((event) => !event));
             }
         }, 1000)
     }, [])
-    
+
     return (
-        <section id="date" className={ `border-0` }>
+        <section id="date" className={`border-0`}>
             <div className="container">
-                {!isEventOver ? 
+                {!isEventOver ?
                     <div className="row text-white border-box g-1">
                         <div className="col-3">
-                            <div className={` border border-1 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow`}>
-                                <p className="fw-bold fs-2 pt-1 px-2 mb-0">{ event.days }</p>
-                                <p className= "m-0 pb-1 ">Hari</p>
-                            </div>
+                            <Slide delay={1}>
+                                <div className={` border border-1 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow`}>
+                                    <p className="fw-bold fs-2 pt-1 px-2 mb-0">{event.days}</p>
+                                    <p className="m-0 pb-1 ">Hari</p>
+                                </div>
+                            </Slide>
                         </div>
                         <div className="col-3">
-                            <div className={` border border-1 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow`}>
-                                <p className="fw-bold fs-2 pt-1 px-2 mb-0">{ event.hours }</p>
-                                <p className= "m-0 pb-1 ">Hari</p>
-                            </div>
+                            <Slide delay={1.5}>
+                                <div className={` border border-1 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow`}>
+                                    <p className="fw-bold fs-2 pt-1 px-2 mb-0">{event.hours}</p>
+                                    <p className="m-0 pb-1 ">Hari</p>
+                                </div>
+                            </Slide>
                         </div>
                         <div className="col-3">
-                            <div className={` border border-1 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow`}>
-                                <p className="fw-bold fs-2 pt-1 px-2 mb-0">{ event.minutes }</p>
-                                <p className= "m-0 pb-1 ">Hari</p>
-                            </div>
+                            <Slide delay={2}>
+                                <div className={` border border-1 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow`}>
+                                    <p className="fw-bold fs-2 pt-1 px-2 mb-0">{event.minutes}</p>
+                                    <p className="m-0 pb-1 ">Hari</p>
+                                </div>
+                            </Slide>
                         </div>
                         <div className="col-3">
-                            <div className={` border border-1 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow`}>
-                                <p className="fw-bold fs-2 pt-1 px-2 mb-0">{ event.seconds }</p>
-                                <p className= "m-0 pb-1 ">Hari</p>
-                            </div>
+                            <Slide delay={2.5}>
+                                <div className={` border border-1 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow`}>
+                                    <p className="fw-bold fs-2 pt-1 px-2 mb-0">{event.seconds}</p>
+                                    <p className="m-0 pb-1 ">Hari</p>
+                                </div>
+                            </Slide>
                         </div>
-
                     </div>
                     :
                     <div>
