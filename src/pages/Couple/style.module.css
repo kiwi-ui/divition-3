@@ -65,12 +65,15 @@
     transition: all 2s ease-in;
     transform: translateX(-90px);
 }
-.details:hover .img{
-    height: 70vh;
-    position: absolute;
-    height: 70vh;
-}
 .details:hover .bio {
-    animation: fadeOut 2s ease-out;
-    opacity: 0;
+    animation: fadeOut 1s ease-out;
+    opacity: 0; 
+}
+.details2:hover .detailsTag{
+    transition: all 2s ease-in;
+    transform: translateX(90px);
+}
+.details2:hover .bio {
+    animation: fadeOut 1s ease-out;
+    opacity: 0; 
 }
