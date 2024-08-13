@@ -37,14 +37,13 @@ const Gift = () => {
     return (
         <section className="my-5">
             <div className="container text-center">
-                <p className={`${ fonts.pinyonScript } fs-1`}>Wedding Gift</p>
+                <u className={ ` ${ fonts.pinyonScript } fs-1 fw-bold` }>Wedding Gift</u>
                 <p>Bagi bapak/ibu/saudara/i yang ingin mengirimkan hadiah pernikahan dapat melalui virtual account atau e-wallet di bawah ini</p>
             </div>
 
             <div className="container">
                 {dataRekening.map((data) => (
                     <div key={ data.id } className="card my-4 text-center shadow rounded-4">
-                        <Slide delay={data.id-0.5}>
                             <div className="card-body text-start my-2">
                                 <div className="d-flex flex-row justify-content-between">
                                     <div className="d-flex flex-column justify-content-end">
@@ -66,13 +65,10 @@ const Gift = () => {
                                     </div>
                                 </div>
                             </div>
-                        </Slide>
                     </div>
                 ))}
             </div>
-                {
-                    copy && <p className='mb-0 bg-dark-subtle py-1 px-3 fw-bold rounded h2 position-fixed text-center start-50 translate-middle-x' style={{zIndex: 100, top:"90vh" }}>Copied</p>
-                }
+                { copy && <p className='mb-0 bg-dark-subtle py-1 px-3 fw-bold rounded h2 position-fixed text-center start-50 translate-middle-x' style={{zIndex: 100, top:"90vh" }}>Copied</p> }
         </section>
     );
 }

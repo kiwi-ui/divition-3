@@ -7,7 +7,10 @@ import general from '../../App.module.css';
 
 const Navbar = () => {
 	const [isSideBarHided,setIsSideBarHided] =useState(false);
-	const hideSideBar = () => { setIsSideBarHided(e => !e) };
+	const hideSideBar = () => { 
+		setIsSideBarHided(e => !e) 
+	
+	};
 
   return (
       <div className={`position-fixed z10 ${style.navbarTransition} ${style.z10} bottom-0 w-100`}>

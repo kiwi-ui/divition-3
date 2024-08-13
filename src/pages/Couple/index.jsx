@@ -18,15 +18,7 @@ const Couple = () => {
     const [fade, setFade] = useState();
     
     useEffect(() => {
-        setCurrentImg(0)
-        // const interval = setInterval(() => {
-            
-        //     setFade(true);
-        //     setCurrentImg((prevIndex) => (prevIndex + 1) % bridePhotos.length);
-        //     setTimeout(() => {
-        //         setFade(false);
-        //     }, 3000);
-        // }, 6000);
+        setCurrentImg(0);
         const switchImage = async () => {
             // Fade out
             setFade(true);
@@ -49,7 +41,7 @@ const Couple = () => {
             <div className={ `bg-light text-black py-5` }>
                 <div className="container position-relative" >
                     <div>
-                        <p className="fs-2 fw-semibold" style={{zIndex: 100}}>Ar-Rum 21</p>
+                        <u className="fs-2 fw-bold pb-3" style={{zIndex: 100}}>Ar-Rum 21</u>
                     </div>
                     <p className="fs-5 mb-0" style={{zIndex: 100}}>Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir</p>
                 </div>
@@ -76,7 +68,7 @@ const Couple = () => {
                     </div>
                 </Slide>
 
-                <div className='d-flex flex-column'>
+                <div className='d-flex flex-column' style={{overflowX:'hidden'}}>
                     <Slide delay={1.5}>
                         <div className={ ` ${ style.details2 } d-flex flex-row justify-content-center justify-content-start position-relative` }>
                             <img src={ groomPhotos[currentImg] } className={`shadow w-100 ${ fade ? '' : style.second }`} alt="groom"/>

@@ -30,7 +30,7 @@ const CountDown = () => {
     }, [])
 
     return (
-        <section id="date" className={`border-0`}>
+        <section id="date" className={`border-0`} style={{overflowX:'hidden'}}>
             <div className="container">
                 {!isEventOver ?
                     <div className="row text-white border-box g-1">

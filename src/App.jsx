@@ -8,7 +8,6 @@ import Gift from './pages/Gift'
 import Wish from './pages/Wish'
 import Closing from './pages/Closing'
 import Music from './components/Music'
-// import Loading from './pages/Loading'
 
 export const MyContext = createContext();
 

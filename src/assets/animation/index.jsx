@@ -17,8 +17,8 @@ export default function Slide({ children, delay, className }) {
     <motion.div
       ref={ref}
       variants={{
-        hidden: { opacity: 0, translateX: 90 },
-        visible: { opacity: 1, translateX: 0 },
+        hidden: { opacity: 0, translateX: 90, position: 'absolute'},
+        visible: { opacity: 1, translateX: 0, position: 'relative'},
       }}
       transition={{
         type: "spring",

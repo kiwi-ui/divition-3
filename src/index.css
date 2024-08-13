@@ -1,3 +1,8 @@
 *{
-    font-family: "Forum", serif !important
+    font-family: "Forum", serif !important;
+    scroll-behavior: smooth;
 }
+#root{
+    overflow-x: hidden;
+}
+
