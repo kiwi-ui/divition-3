@@ -39,8 +39,8 @@ const Opening = () => {
   };
 
   return ( 
-    <section className={`vh-100 ${screenWidth > 570 ? `${style.bgContain}` : `${style.bgCover}` }  position-relative d-flex align-items-end`} style={ backgroundImageStyle }>
-      <div className="container py-4" style={{zIndex: 10}}>
+    <section id="opening" className={` vh-100 ${screenWidth > 570 ? `${style.bgContain}` : `${style.bgCover}` }  position-relative d-flex align-items-end`} style={ backgroundImageStyle }>
+      <div className="container opening py-4" style={{zIndex: 10}}>
         <div className="my-3 text-center mx-3 text-white" style={{overflowX:'hidden'}}>
           <p className="mb-2 fs-5">The Wedding Of</p>
           <p className={ ` ${fonts.pinyonScript} mb-3 fw-bold` } style={{fontSize: '2.5rem'}}>Yusni & Anggara</p>

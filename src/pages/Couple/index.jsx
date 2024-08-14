@@ -37,7 +37,7 @@ const Couple = () => {
     }, []);
 
     return (
-        <div className={ `text-center position-relative` } id="main">
+        <div id="couple" className={ `text-center position-relative` } >
             <div className={ `bg-light text-black py-5` }>
                 <div className="container position-relative" >
                     <div>
@@ -59,9 +59,9 @@ const Couple = () => {
                                     <p className={ ` ${ fonts.pinyonScript } fw-semibold mb-1 fs-1 `} style={{ letterSpacing:'0.2rem' }}>Yusni Anggara</p>
                                     <p className="fs-4 mb-0 fw-bold">Putri bungsu dari</p>
                                     <p className="mb-2">Bapak mempelai & Ibu mempelai</p>
-                                    <div className="">
+                                    <a className="btn bg-white" href="https://www.instagram.com/yusnianggara/" target='_blank' rel="noreferrer">
                                         <BsInstagram className="fs-3" style={{color:'rgb(179, 148, 151)'}}/>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -79,9 +79,9 @@ const Couple = () => {
                                     <p className={ ` ${ fonts.pinyonScript } fw-semibold mb-1 fs-1 `} style={{ letterSpacing: "0.2rem" }}>Yusni Anggara</p>
                                     <p className="fs-4 mb-0 fw-bold">Putri bungsu dari</p>
                                     <p className=" mb-2">Bapak mempelai & Ibu mempelai</p>
-                                    <div className="">
+                                    <a className="btn bg-white" href="https://www.instagram.com/yusnianggara/" target='_blank' rel="noreferrer">
                                         <BsInstagram className="fs-3" style={{color:'rgb(179, 148, 151)'}}/>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
