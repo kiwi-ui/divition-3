@@ -8,7 +8,7 @@ import fonts from '../../assets/fonts/fonts.module.css';
 
 const MainEvent = () => {
   return (
-    <section className="container my-4">
+    <section className={`container my-4 ${style.width75}`}>
         <div className="d-flex flex-column flex-lg-row gap-5 gap-lg-0 justify-content-center mx-4">
             <div className={ `${ style.roundedTopStart } border border-3 ${style.borderPrimary} border-end-0` }>
                 <div className="position-relative mt-1 ms-1">

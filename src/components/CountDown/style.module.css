@@ -26,3 +26,11 @@ a {text-decoration: none}
 .bgCountdown {
     background-color: rgba(105, 90, 92, 0.8)
 }
+.width75{
+    width: 100%;
+}
+@media only screen and (min-width: 960px) {
+    .width75{
+        width: 65%;
+    }
+}

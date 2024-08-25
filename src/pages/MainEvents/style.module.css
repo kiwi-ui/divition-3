@@ -6,3 +6,11 @@
 .borderPrimary{
     border-color: rgb(179, 148, 151) !important
 }
+.width75{
+    width: 100%;
+}
+@media only screen and (min-width: 960px) {
+    .width75{
+        width: 65%;
+    }
+}

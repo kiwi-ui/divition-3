@@ -47,14 +47,14 @@ const Couple = () => {
                 </div>
             </div> */}
 
-            <div className="text-black d-flex flex-lg-row flex-column justify-content-center gap-md-3 mt-4">
+            <div className="text-black d-flex flex-lg-row flex-column justify-content-center gap-md-2">
                 <Slide delay={1}>
                     <div className='d-flex flex-column'>
                         <div className={`${ style.details } d-flex flex-row justify-content-start position-relative`}>
                             <img src={ bridePhotos[currentImg] } className={`shadow w-100  ${ fade ? style.third : style.second } ` } alt="bride"/>
                             <span className={ `${ style.rotate90 } ${ style.detailsTag }  ${ style.bgTag } ${fonts.pinyonScript} text-white fs-1 position-absolute start-0 h-100 px-3`}>The Bride</span>
 
-                            <div className={ `${ style.bgTransparent1 } rounded bottom-0 w-75 px-3 py-3 position-absolute ${style.bio}` } style={{ zIndex: 2, left: '3.4rem' }}>
+                            <div className={ `${ style.bgTransparent1 } rounded bottom-0 w-75 px-3 py-3 position-absolute ${style.bio}` } style={{ zIndex: 2, left: '4.3rem' }}>
                                 <div className='container text-start'>
                                     <p className={ ` ${ fonts.pinyonScript } fw-semibold mb-1 fs-1 `} style={{ letterSpacing:'0.2rem' }}>Yusni Anggara</p>
                                     <p className="fs-4 mb-0 fw-bold">Putri bungsu dari</p>
@@ -74,7 +74,7 @@ const Couple = () => {
                             <img src={ groomPhotos[currentImg] } className={`shadow w-100 ${ fade ? '' : style.second }`} alt="groom"/>
                             <span className={` ${ style.rotate90 } ${ style.detailsTag } ${ fonts.pinyonScript } ${ style.bgTag } text-white fs-1 position-absolute end-0 h-100 px-3`}>The Groom</span>
 
-                            <div className={` ${ style.bgTransparent1 } rounded bottom-0 w-75 text-center px-4 py-3 position-absolute ${style.bio}`} style={{zIndex: 2, right: '3.1rem'}}>
+                            <div className={` ${ style.bgTransparent1 } rounded bottom-0 w-75 text-center px-4 py-3 position-absolute ${style.bio}`} style={{zIndex: 2, right: '3.7 rem'}}>
                                 <div className='container text-end'>
                                     <p className={ ` ${ fonts.pinyonScript } fw-semibold mb-1 fs-1 `} style={{ letterSpacing: "0.2rem" }}>Yusni Anggara</p>
                                     <p className="fs-4 mb-0 fw-bold">Putri bungsu dari</p>

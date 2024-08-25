@@ -41,9 +41,9 @@ const Gift = () => {
                 <p>Bagi bapak/ibu/saudara/i yang ingin mengirimkan hadiah pernikahan dapat melalui virtual account atau e-wallet di bawah ini</p>
             </div>
 
-            <div className="container">
+            <div className="mx-4 row justify-content-center">
                 {dataRekening.map((data) => (
-                    <div key={ data.id } className="card my-4 text-center shadow rounded-4">
+                    <div key={ data.id } className={ `card my-4 text-center shadow rounded-4 ${ style.width75 }` }>
                             <div className="card-body text-start my-2">
                                 <div className="d-flex flex-row justify-content-between">
                                     <div className="d-flex flex-column justify-content-end">
