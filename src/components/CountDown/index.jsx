@@ -59,7 +59,7 @@ const CountDown = () => {
                             </Slide>
                         </div>
                         <div className="col-3">
-                            <Slide delay={1.6}>
+                            <Slide delay={1.4}>
                                 <div className={` border border-1 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow`}>
                                     <p className="fw-bold fs-4 pt-1 mb-0">{event.seconds}</p>
                                     <p className="m-0 pb-1 ">Hari</p>
