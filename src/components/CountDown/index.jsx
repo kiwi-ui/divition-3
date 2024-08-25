@@ -33,8 +33,8 @@ const CountDown = () => {
         <section id="date" className="border-0 position-relative" style={{  overflowX:'hidden' }}>
             <div className="row justify-content-center">
                 {!isEventOver ?
-                    <div className={`row text-white ${style.width75}`}>
-                        <div className="col-3">
+                    <div className={`row text-white`}>
+                        <div className="col-4">
                             <Slide delay={1}>
                                 <div className={` border border-1 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow`}>
                                     <p className="fw-bold fs-4 pt-1 mb-0">{event.days}</p>
@@ -42,30 +42,30 @@ const CountDown = () => {
                                 </div>
                             </Slide>
                         </div>
-                        <div className="col-3">
-                            <Slide delay={1.2}>
+                        <div className="col-4">
+                            <Slide delay={1}>
                                 <div className={` border border-1 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow`}>
                                     <p className="fw-bold fs-4 pt-1 mb-0">{event.hours}</p>
-                                    <p className="m-0 pb-1 ">Hari</p>
+                                    <p className="m-0 pb-1 ">Jam</p>
                                 </div>
                             </Slide>
                         </div>
-                        <div className="col-3">
-                            <Slide delay={1.4}>
+                        <div className="col-4">
+                            <Slide delay={1}>
                                 <div className={` border border-1 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow`}>
                                     <p className="fw-bold fs-4 pt-1 mb-0">{event.minutes}</p>
-                                    <p className="m-0 pb-1 ">Hari</p>
+                                    <p className="m-0 pb-1 ">Menit</p>
                                 </div>
                             </Slide>
                         </div>
-                        <div className="col-3">
-                            <Slide delay={1.4}>
+                        {/* <div className="col-1">
+                            <Slide delay={1}>
                                 <div className={` border border-1 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow`}>
-                                    <p className="fw-bold fs-4 pt-1 mb-0">{event.seconds}</p>
+                                    <p className="fw-bold fs-4 pt-1 mb-0">{event.days}</p>
                                     <p className="m-0 pb-1 ">Hari</p>
                                 </div>
                             </Slide>
-                        </div>
+                        </div> */}
                     </div>
                     :
                     <div>
