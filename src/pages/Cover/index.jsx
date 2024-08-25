@@ -13,9 +13,9 @@ const Cover = () => {
 
     return (
         <section className={ `${ style.bgCover } text-white overflow-hidden d-flex flex-column justify-content-between align-items-center text-center py-5` }>
-            <div className={ `${ style.z10 }` }>
+            <div className={ `${ style.z10 } container` }>
                 <p className='fs-4'>Undangan Pernikahan</p>
-                <p className={ `mb-1 fw-bold ${ mainStyle.colorPrimary } ${ font.pinyonScript }`} style={{ letterSpacing: '0.1rem', fontSize: '3.2rem' }}>Yusni & Anggara</p>
+                <p className={ `mb-1 fw-bold ${ mainStyle.colorPrimary } ${ font.pinyonScript }`} style={{ letterSpacing: '0.1rem', fontSize: '2.5rem' }}>Yusni & Anggara</p>
                 <p className='fs-5 mb-0 text-white'>Sabtu, 27 April 2024</p>
             </div>
 

@@ -38,16 +38,16 @@ const Couple = () => {
 
     return (
         <div id="couple" className={ `text-center position-relative` } >
-            <div className={ `bg-light text-black py-5` }>
+            {/* <div className={ `bg-light text-black py-5` }>
                 <div className="container position-relative" >
                     <div>
                         <u className="fs-2 fw-bold pb-3" style={{zIndex: 100}}>Ar-Rum 21</u>
                     </div>
                     <p className="fs-5 mb-0" style={{zIndex: 100}}>Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir</p>
                 </div>
-            </div>
+            </div> */}
 
-            <div className="text-black d-flex flex-lg-row flex-column justify-content-center gap-md-3">
+            <div className="text-black d-flex flex-lg-row flex-column justify-content-center gap-md-3 mt-4">
                 <Slide delay={1}>
                     <div className='d-flex flex-column'>
                         <div className={`${ style.details } d-flex flex-row justify-content-start position-relative`}>
